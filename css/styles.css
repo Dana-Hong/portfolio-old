@@ -1,0 +1,312 @@
+*, p, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Barlow;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    position: relative;
+    /* border: solid pink 5px; */
+
+}
+
+li {
+    list-style: none;
+}
+
+a, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* --LAYOUT-- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-areas: 
+    ". header ."
+    ". main ."
+    ;
+}
+
+.main {
+    grid-area: main;
+}
+
+.section {
+    margin-bottom: 2em;
+}
+
+/* --TYPOGRAPHY-- */
+
+.section__title {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+}
+
+.nav__item, .section__body, .project__description {
+    letter-spacing: .5px;
+    line-height: 1.6;
+}
+
+.project__title {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+
+/* *******HEADER******** */
+
+.header {
+    grid-area: header;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* border: solid red 2px; */
+    /* position: absolute; */
+
+}
+
+.nav {
+    width: 50%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.25em 0;
+    /* border: solid rgb(192, 255, 211) 2px; */
+    gap: 2rem;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__text {
+    display: flex;
+    align-items: baseline;
+}
+
+.hero__title {
+    font-weight: 100;
+    font-size: 8vw;
+    margin-right: 1em;
+}
+
+.hero__subtitle {
+    font-size: 4vw;
+}
+
+/* ABOUT */
+
+.about {
+    margin: 0 auto 2em;
+}
+
+.about > .section__title {
+    margin-bottom: .5em;
+}
+
+/* PROJECTS */
+
+.work {
+    /* border: solid red 2px; */
+    padding: 0 2em;
+}
+
+.project__title {
+    display: flex;
+    /* border: solid yellow 2px; */
+    margin: 1em 0;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    /* border: solid rgb(0, 204, 255) 2px; */
+    gap: 1.125em;
+}
+
+.project__name {
+    margin-left: 1em;
+}
+
+.project__img {
+    height: 100%;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* CONTACT */
+
+.contact {
+    /* border: solid red 5px; */
+    padding: 2em;
+}
+
+.contact > .flex {
+    /* border: solid rgb(0, 128, 107) 2px; */
+    padding: 1.5em 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 auto;
+    /* border: solid pink 2px; */
+    width: 100%;
+}
+
+.form__message {
+    /* border: solid steelblue 2px; */
+}
+
+.form__component {
+    margin: 0 auto 1.5em;
+    /* border: solid yellow 2px; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* label {
+    display: block;
+    margin-bottom: 1em;
+} */
+
+input, textarea {
+    font-size: 1rem;
+    font-family: Barlow;
+    font-weight: 700;
+    text-indent: 5px;
+    height: 3em;
+    min-width: 250px;
+    outline: none;
+    /* border: solid red 2px; */
+}
+
+input:focus, textarea:focus {
+    border-bottom: red 3px;
+}
+
+textarea {
+    height: 7em;
+}
+
+.btn {
+    font-size: 1.125rem;
+    font-family: Barlow;
+    font-weight: 700;
+    padding: .5em 1em;
+    border-radius: 5px;
+    background-color: aqua;
+    max-width: 150px;
+    margin: 0 auto;
+    /* border: solid red 2px; */
+}
+
+
+@media (min-width: 650px) {    
+    .section__title {
+        font-size: 2.25rem;
+    }
+    
+    .project__title {
+        font-size: 1.75rem;
+    }
+
+    .about .section__title {
+        flex: 0 0 33%;
+    }
+
+    .nav__item, .section__body, .project__description, .form__message, label  {
+        font-size: 1.125rem;
+    }
+
+    .flex {
+        flex-direction: row;
+        padding: 2em;
+        gap: 2em;
+    }
+
+    .project__img {
+        width: 50%;
+    }
+
+    .project:nth-child(2) >
+    .flex {
+        flex-direction: row-reverse;
+    }
+
+    .contact > .flex {
+        flex-direction: row;
+    }
+
+    .form__message {
+        width: 48%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .form__component {
+        width: 70%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 950px) {
+    .section__title {
+        font-size: 2.75rem;
+    }
+    
+    .project__title {
+        font-size: 2.25rem;
+    }
+
+    .nav__item, .section__body, .project__description, .form__message, label  {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about, .work, .contact {
+        max-width: 1200px;
+        margin: 0 auto 2em;
+    }
+
+    .section__title {
+        font-size: 3.25rem;
+    }
+
+    .project__title {
+        font-size: 2.75rem;
+    }
+
+    .nav__item, .section__body, .project__description, .form__message, label, input, textarea {
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        height: 15em;
+    };
+}

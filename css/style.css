@@ -1,0 +1,176 @@
+/* DEFAULTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid red 2px; */
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: Barlow;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: solid red 2px;
+}
+
+/* LAYOUT */
+
+.grid {
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-areas: 
+        "header header header"
+        "main main main";
+}
+
+/* .work, .about, .contact {
+    width: 80%;
+    margin: 0 auto;
+} */
+
+/* *******HEADER******** */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border: solid green 2px;
+    grid-area: header;
+}
+
+.nav {
+    max-width: 250px;
+    flex: 0 0 48%;
+    border: solid rgb(177, 137, 26) 4px;
+}
+
+.nav__list {
+    border: solid red 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* *******MAIN******** */
+
+.main {
+    grid-area: "main";
+    border: solid salmon 3px;
+}
+
+/* HERO */
+/* .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hero__title {
+    font-size: 7vw;
+    font-weight: normal;
+}
+
+.hero__subtitle {
+    color: rgb(173, 173, 172);
+    font-size: 4vw;
+}
+
+.section__title {
+    text-align: center;
+} */
+
+/* PROJECTS */
+
+/* .project {
+    padding: 0 3em;
+    border: solid pink 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project__flex {
+    border: solid green 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project__title {
+    border: solid red 2px;
+    display: flex;
+    padding: 1.5rem;
+    align-self: flex-start;
+}
+
+.project__number, .project__name {
+    font-size: 1.75rem;
+}
+
+.project__number {
+    opacity: 0.7;
+    letter-spacing: .3rem;
+}
+
+.project__name {
+    letter-spacing: 0.1rem;
+}
+
+.project__img {
+    max-width: 500px;
+}
+
+.project__description {
+    padding: 2em;
+    line-height: 1.7;
+    font-size: 1.125rem;
+} */
+
+/* @media (min-width: 900px) {
+    body {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .project {
+        flex-flow: row wrap;
+    }
+
+    .project__title {
+        flex: 0 0 100%;
+    }
+
+    .project__flex {
+        flex-direction: row;
+    }
+} */
+/* 
+    .project__img {
+        flex: 0 0 48%;
+    }
+    
+    .project__description {
+        flex: 0 0 48%;
+    } */
