@@ -14,7 +14,7 @@
     --fs-body: 1.125rem;
 
     --bg-color-dark: rgb(26 26 26);
-    --bg-color-gold: rgb(3, 33, 51);
+    --bg-color-gold: rgba(241, 245, 20, 0.959);
 }
 
 html {
@@ -65,19 +65,22 @@ a, a:hover, a:active {
     line-height: 1.6;
 }
 
-.project__title {
+.project__title, .form__title {
     font-size: 1.25rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 
 /* *******HEADER******** */
 
-.header {
-    border: solid red 2px;
+header {
+    padding: 1em;
     color: white;
-    display: flex;
-    justify-content: space-around;
+}
+
+.nav__toggle {
+    position: absolute;
 }
 
 .nav {
@@ -93,7 +96,6 @@ a, a:hover, a:active {
 }
 
 .nav__menu {
-    border: solid red 2px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -104,6 +106,33 @@ a, a:hover, a:active {
 .nav__toggle {
     background-color: inherit;
     cursor: pointer;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.open-menu .nav {
+    transform: translatex(0);
+}
+
+.open-menu .nav__toggle {
+    position: fixed;
+    right: 0;
+}
+
+.open-menu .nav__item {
+    font-size: 3rem;
+    padding: 2rem 0 0 2rem;
+}
+
+.open-menu a {
+    color: rgb(150, 101, 12);
+}
+
+.open-menu a:hover {
+    text-shadow: 0 1px 1px rgb(255, 255, 255);
 }
 
 .burger-menu {
@@ -113,8 +142,8 @@ a, a:hover, a:active {
 }
 
 .burger-menu, .burger-menu::before, .burger-menu::after {
-    height: 3.5px;
-    width: 30px;
+    height: 3px;
+    width: 25px;
 }
 
 .burger-menu::before, .burger-menu::after {
@@ -126,12 +155,12 @@ a, a:hover, a:active {
 
 .burger-menu::before {
     background-color: rgb(9, 77, 122);
-    bottom: 10px;
+    bottom: 7.5px;
 }
 
 .burger-menu::after {
     background-color: rgb(105, 191, 248);
-    top: 10px;
+    top: 7.5px;
 }
 
 /* HERO */
@@ -205,6 +234,40 @@ a, a:hover, a:active {
 }
 
 /* CONTACT */
+
+.form__component {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, textarea {
+    padding: .7em 0;
+}
+
+label {
+    font-size: 1.125rem;
+}
+
+input {
+    font-size: 1rem;
+}
+
+input, textarea {
+    padding-left: .5em;
+    font-family: Barlow;
+}
+
+textarea {
+    font-size: 1rem;
+    resize: none;
+}
+
+.form__component .btn {
+    font-family: Barlow;
+    display: block;
+    padding: 1em 1em;
+}
+
 
 /* .contact {
 
@@ -280,7 +343,7 @@ textarea {
         flex: 0 0 33%;
     }
 
-    .nav__item, .section__body, .project__body, .form__message, label  {
+    .nav__item, .section__body, .project__body, .form__title, label  {
         font-size: 1.125rem;
     }
 
@@ -303,7 +366,7 @@ textarea {
         flex-direction: row;
     }
 
-    .form__message {
+    .form__title {
         width: 48%;
         margin: 0 auto;
         text-align: center;
@@ -329,7 +392,7 @@ textarea {
         font-size: 2.25rem;
     }
 
-    .nav__item, .section__body, .project__body, .form__message, label  {
+    .nav__item, .section__body, .project__body, .form__title, label  {
         font-size: 1.25rem;
     }
 }
@@ -348,7 +411,7 @@ textarea {
         font-size: 2.75rem;
     }
 
-    .nav__item, .section__body, .project__body, .form__message, label, input, textarea {
+    .nav__item, .section__body, .project__body, .form__title, label, input, textarea {
         font-size: 1.5rem;
     }
 
