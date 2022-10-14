@@ -9,3 +9,8 @@ window.addEventListener("resize", onresize);
 document.querySelector(".btn").addEventListener("click", (event) => {
    event.preventDefault();
 })
+
+document.querySelector('.nav__toggle').addEventListener('click', () => {
+   console.log('test');
+   document.querySelector('header').classList.toggle('open-menu');
+})
