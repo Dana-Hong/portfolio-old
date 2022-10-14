@@ -41,7 +41,9 @@ a {
 
 .section {
     padding: 0 2em;
-    margin-bottom: 2em;
+    margin: 0 auto 2em;
+    max-width: 1200px;
+
 }
 
 /* --TYPOGRAPHY-- */
@@ -55,7 +57,7 @@ a {
 }
 
 .section__body {
-    padding: 0 1em 2em;
+    padding: 1.5em;
 }
 
 .nav__item, .section__body, .project__body {
@@ -75,6 +77,8 @@ a {
 header {
     padding: 1em;
     color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav__toggle {
@@ -107,22 +111,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background: linear-gradient(160deg, rgb(1, 6, 14), rgb(3, 16, 31));
 }
 
 .nav__item {
     position: relative;
+    font-size: 3rem;
 }
 
 .nav__link {
-    font-size: 3rem;
     text-align: center;
     display: block;
-    width: 70%;
-    max-width: 220px;
     color: white;
-
-    transition: color 300ms;
+    
+    transition: color 300ms, border-bottom 300ms;
 }
 
 .nav__link:hover {
@@ -132,16 +135,15 @@ header {
 .nav__link::after {
     opacity: 0;
     content: '';
-    height: 3px;
-    width: 55%;
+    height: 2px;
+    width: 100%;
     max-width: 200px;
-    margin-left: .9em;
     position: absolute;
 
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, blue, red);
+    background: linear-gradient(to right, rgb(22, 22, 204), rgb(13, 94, 141));
 
     transition: opacity 300ms;
 }
@@ -157,10 +159,6 @@ header {
 .open-menu .nav__toggle {
     position: fixed;
     right: 0;
-}
-
-.open-menu .nav__item {
-    padding: 2rem 0 0 2rem;
 }
 
 .burger-menu {
@@ -231,6 +229,7 @@ header {
 
 .project__title {
     display: flex;
+    padding: 1em;
 }
 
 .flex {
@@ -258,6 +257,11 @@ header {
 }
 
 /* CONTACT */
+
+.form {
+    max-width: 650px;
+    margin: 0 auto;
+}
 
 .form__component {
     display: flex;
@@ -325,6 +329,48 @@ textarea {
     transform: translateX(75px);
 }
 
+@media (min-width: 900px) {
+    .project__title, .form__title {
+        font-size: 1.75rem;
+    }
+    
+    .nav__item, .section__body, .project__body, label, input, textarea {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 900px) {
+    .nav {
+        position: static;
+        transform: translate(0);
+        justify-self: flex-end;
+        width: 50%;
+        max-width: 1000px;
+    }
+    
+    .nav__toggle {
+        display: none;
+    }
+    
+    .nav__menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: var(--bg-color-dark);
+    }
+   
+}
+
+@media (min-width: 1200px) {
+    .project__title, .form__title {
+        font-size: 2rem;
+    }
+
+    .nav__item, .section__body, .project__body {
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+}
 
 /* .contact {
 
