@@ -9,13 +9,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
         <script src="script.js" defer></script>
-        <title>Dana Hong | Frontend Developer</title>
+        <title>Dana Hong | Front-End Developer</title>
     </head>
-    <body class="grid">
+    <body>
         <header class="header">
             <div class="logo"><a href="#hero">Dana Hong</a></div>
+            <button class="nav__toggle" aria-label="toggle navigation">
+                <span class="burger-menu"></span>
+            </button>
             <nav class="nav">
-                <menu class="nav__list">
+                <menu class="nav__menu">
                     <li class="nav__item">
                         <a href="#work">Work</a>
                     </li>
@@ -31,31 +34,31 @@
         <main class="main">
             <!-- HERO -->
             <section class="hero section" id="hero">
-                <div class="hero__text">
+                <div class="hero__text-container">
                     <h1 class="hero__title">Dana Hong</h1>
-                    <p class="hero__subtitle">Frontend Developer</p>
+                    <p class="hero__subtitle">Front-End Developer</p>
                 </div>
             </section>
             <!-- /HERO -->
             <!-- ABOUT -->
             <section class="about section" id="about">
-                <div class="flex">
-                    <h1 class="section__title">About</h1>
-                    <p class="section__body">I am a passionate learner dolor sit amet consectetur adipisicing elit. Recusandae, nulla sint voluptas veritatis provident iure fugit repellat, quisquam quasi dolorem, quaerat dolorum minima neque doloribus dolore officiis deleniti distinctio eveniet.</p>
-                </div>
+                <h1 class="section__title">About Me</h1>
+                <p class="section__body">I am Front-End developer based in Toronto, Ontario. I love building things and solving puzzles. Coding allows me to do both at the same time. When I don't have an editor open, I'm playing bullet chess, bouldering, or watching Monk with my wife.</p>
             </section>
             <!-- WORK -->
-            <section class="work section" id="work">
-                <h1 class="section__title">Work</h1>
+            <section class="projects section" id="projects">
+                <h1 class="section__title">Projects</h1>
                 <!-- PROJECT -->
                 <div class="project">
                     <div class="project__title">
                         <p class="project__number">01</p>
-                        <p class="project__name">Quizzical</p>
+                        <p class="project__name">Crystal Clear</p>
                     </div>
                     <div class="flex">
                         <img src="./imgs/quizzical_02.JPG" alt="ramen" class="project__img">
-                        <p class="project__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem fugiat earum rem facilis consequuntur quas veniam eligendi corporis vel nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, libero.</p>
+                        <p class="project__body">
+                            A SPA application bootstrapped with Create React App. The app is a mock water treatment website inspired by Crystal Clear Water Centres located in Waterloo. Users can browse and filter different products, add them to a cart, and check them out. Uses React Router to dynamically load different pages.
+                        </p>
                     </div>
                 </div>
                 <!-- /PROJECT -->
@@ -63,13 +66,11 @@
                 <div class="project">
                     <div class="project__title">
                         <p class="project__number">02</p>
-                        <p class="project__name">Crystal Clear</p>
+                        <p class="project__name">Quizzical</p>
                     </div>
                     <div class="flex">
                         <img src="./imgs/quizzical_01.JPG" alt="" class="project__img">
-                        <p class="project__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, veniam deleniti. Laborum consequatur maxime suscipit officia neque mollitia excepturi explicabo! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quasi possimus magnam animi esse harum.
-                        </p>
+                        <p class="project__body">A Trivia quiz game that fetches data from the Open Trivia Database. Players can select the number of questions, along with the category, difficulty, and type. Written in React.</p>
                     </div>
                 </div>
                 <!-- /PROJECT -->
