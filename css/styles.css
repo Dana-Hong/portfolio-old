@@ -29,13 +29,11 @@ body {
     position: relative;
 }
 
-
 li {
     list-style: none;
 }
 
-a, a:hover, a:active {
-    color: white;
+a {
     text-decoration: none;
 }
 
@@ -80,7 +78,16 @@ header {
 }
 
 .nav__toggle {
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
     position: absolute;
+    margin-top: 2em;
+    margin-right: 2em;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .nav {
@@ -100,17 +107,47 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: linear-gradient(160deg, rgb(1, 6, 14), rgb(7, 35, 66));
+    background: linear-gradient(160deg, rgb(1, 6, 14), rgb(3, 16, 31));
 }
 
-.nav__toggle {
-    background-color: inherit;
-    cursor: pointer;
-    z-index: 100;
-    top: 0;
+.nav__item {
+    position: relative;
+}
+
+.nav__link {
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+    width: 70%;
+    max-width: 220px;
+    color: white;
+
+    transition: color 300ms;
+}
+
+.nav__link:hover {
+    color: rgb(150, 101, 12);
+}
+
+.nav__link::after {
+    opacity: 0;
+    content: '';
+    height: 3px;
+    width: 55%;
+    max-width: 200px;
+    margin-left: .9em;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
     right: 0;
-    margin-top: 2em;
-    margin-right: 2em;
+    background: linear-gradient(to right, blue, red);
+
+    transition: opacity 300ms;
+}
+
+.nav__link:hover::after {
+    opacity: 1;
 }
 
 .open-menu .nav {
@@ -123,16 +160,7 @@ header {
 }
 
 .open-menu .nav__item {
-    font-size: 3rem;
     padding: 2rem 0 0 2rem;
-}
-
-.open-menu a {
-    color: rgb(150, 101, 12);
-}
-
-.open-menu a:hover {
-    text-shadow: 0 1px 1px rgb(255, 255, 255);
 }
 
 .burger-menu {
@@ -199,10 +227,6 @@ header {
 
 /* ABOUT */
 
-.about {
-    
-}
-
 /* PROJECTS */
 
 .project__title {
@@ -264,8 +288,41 @@ textarea {
 
 .form__component .btn {
     font-family: Barlow;
-    display: block;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    background: linear-gradient(135deg, rgb(255, 143, 15), rgb(185, 110, 11));
+    justify-content: center;
     padding: 1em 1em;
+    position: relative;
+}
+
+.button-content-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-text {
+    transform: translateX(.8em);
+    transition: transform 300ms;
+}
+
+.send-icon {
+    transform: translateX(50px) rotate(45deg);
+    transition: transform 300ms;
+}
+
+.btn:hover .button-text {
+    transform: translateX(12.5px) scale(1.2);
+}
+
+.btn:hover .send-icon {
+    transform: translateX(75px);
+}
+
+.btn:active .send-icon {
+    transform: translateX(75px);
 }
 
 

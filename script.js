@@ -11,6 +11,10 @@ document.querySelector(".btn").addEventListener("click", (event) => {
 })
 
 document.querySelector('.nav__toggle').addEventListener('click', () => {
-   console.log('test');
    document.querySelector('header').classList.toggle('open-menu');
-})
+});
+
+Array.from(document.querySelectorAll('.nav__item')).forEach(navItem => navItem.addEventListener('click', () => {
+   document.querySelector('header').classList.toggle('open-menu');
+}));
+
