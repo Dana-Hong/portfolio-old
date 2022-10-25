@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <link rel="icon" href="favicon.ico?" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <script src="script.js" defer></script>
         <title>Dana Hong | Front-End Developer</title>
@@ -43,7 +45,63 @@
             <!-- ABOUT -->
             <section class="about section" id="about">
                 <h1 class="section__title">About Me</h1>
-                <p class="section__body">I am Front-End developer based in Toronto, Ontario. I love building things and solving puzzles. Coding allows me to do both at the same time. When I don't have an editor open, I'm playing bullet chess, bouldering, or watching Monk with my wife.</p>
+                <!-- <img class="profile-img" src="./imgs/Takakkaw.jpg" alt="" srcset=""> -->
+                <p class="section__body">I am Front-End developer based in Toronto, Ontario. I love building things and solving puzzles. Coding allows me to do both at the same time. Having come from a background in Biology, I have developed a curiosity that pushes me to strive for excellence. </p>
+                <p class="section__body">
+                    When I don't have an editor open, I'm playing bullet chess, bouldering, or watching Monk with my wife.
+                </p>
+                <p class="section__subtitle">Languages / Tech:</p>
+                <div class="tech-container">
+                    <div class="icon-container">
+                        <p class="icon-text">HTML5</p>
+                        <i class="icon-logo devicon-html5-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">CSS3</p>
+                        <i class="icon-logo devicon-css3-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">Tailwind</p>
+                        <i class="icon-logo devicon-tailwindcss-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">JavaScript</p>
+                        <i class="icon-logo devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">TypeScript</p>
+                        <i class="icon-logo devicon-typescript-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">React</p>
+                        <i class="icon-logo devicon-react-original colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">NodeJs</p>
+                        <i class="icon-logo devicon-nodejs-plain-wordmark colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">Jest</p>
+                        <i class="icon-logo devicon-jest-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">C</p>
+                        <i class="icon-logo devicon-c-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">Bash</p>
+                        <i class="icon-logo devicon-bash-plain"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">Git</p>
+                        <i class="icon-logo devicon-git-plain colored"></i>
+                    </div>
+                    <div class="icon-container">
+                        <p class="icon-text">Github</p>
+                        <i class="icon-logo devicon-github-original"></i>
+                    </div>
+                </div>
+
             </section>
             <!-- WORK -->
             <section class="projects section" id="projects">
@@ -54,11 +112,15 @@
                         <p class="project__number">01</p>
                         <p class="project__name">Crystal Clear</p>
                     </div>
-                    <div class="flex">
-                        <img src="./imgs/quizzical_02.JPG" alt="ramen" class="project__img">
+                    <div class="project-grid">
                         <p class="project__body">
                             A SPA application bootstrapped with Create React App. The app is a mock water treatment website inspired by Crystal Clear Water Centres located in Waterloo. Users can browse and filter different products, add them to a cart, and check them out. Uses React Router to dynamically load different pages.
                         </p>
+                        <div class="icon-container">
+                            <p class="icon-text">React</p>
+                            <i class="small icon-logo devicon-react-original colored"></i>
+                        </div>
+                        <img src="./imgs/quizzical_02.JPG" alt="ramen" class="project__img odd">
                     </div>
                 </div>
                 <!-- /PROJECT -->
@@ -68,9 +130,13 @@
                         <p class="project__number">02</p>
                         <p class="project__name">Quizzical</p>
                     </div>
-                    <div class="flex">
-                        <img src="./imgs/quizzical_01.JPG" alt="" class="project__img">
+                    <div class="project-grid">
                         <p class="project__body">A Trivia quiz game that fetches data from the Open Trivia Database. Players can select the number of questions, along with the category, difficulty, and type. Written in React.</p>
+                        <div class="icon-container">
+                            <p class="icon-text">React</p>
+                            <i class="small icon-logo devicon-react-original colored"></i>
+                        </div>
+                        <img src="./imgs/quizzical_01.JPG" alt="" class="project__img even">
                     </div>
                 </div>
                 <!-- /PROJECT -->
