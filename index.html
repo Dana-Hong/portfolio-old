@@ -125,13 +125,14 @@
                             <p class="icon-text">React</p>
                             <i class="small icon-logo devicon-react-original colored"></i>
                         </div>
-                        <a 
-                            class="project__img odd" 
-                            href="https://endearing-panda-e9e290.netlify.app/"
-                            target="_blank"
-                            >
-                            <img src="./imgs/crystal_clear_01.JPG" alt="Crystal clear clone home page" class="project__img odd">
-                        </a>
+                        <div class="project__img even">
+                            <a 
+                                href="https://endearing-panda-e9e290.netlify.app/"
+                                target="_blank"
+                                >
+                                <img src="./imgs/crystal_clear_01.JPG" alt="Crystal clear clone home page" class="project__img odd">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- /PROJECT -->
@@ -153,13 +154,14 @@
                             <p class="icon-text">React</p>
                             <i class="small icon-logo devicon-react-original colored"></i>
                         </div>
-                        <a 
-                            class="project__img even" 
-                            href="https://sunny-sable-267a21.netlify.app/"
-                            target="_blank"
-                            >
-                            <img src="./imgs/quizzical_01.JPG" alt="Quizzical home page" class="project__img even">
-                        </a>
+                        <div class="project__img odd">
+                            <a
+                                href="https://sunny-sable-267a21.netlify.app/"
+                                target="_blank"
+                                >
+                                <img src="./imgs/quizzical_01.JPG" alt="Quizzical home page" class="project__img">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- /PROJECT -->
@@ -170,21 +172,21 @@
                 <h1 class="section__title">Contact</h1>
                 <div class="form flex">
                     <p class="form__title">Want to get in touch?</p>
-                    <form action="#" method="post">
+                    <form action="https://formsubmit.co/dana.hong@hotmail.com" method="POST">
                         <div class="form__component name">
                             <label for="name">Name</label>
-                            <input placeholder="Name" type="text" id="name">
+                            <input required placeholder="Name" type="text" id="name" name="name">
                         </div>
                         <div class="form__component email">
                             <label for="email">Email</label>
-                            <input placeholder="example@email.com" type="email" id="email">
+                            <input required placeholder="example@email.com" type="email" id="email" name="email">
                         </div>
                         <div class="form__component message">
                             <label for="message">Message</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea required name="message" id="" cols="30" rows="10"></textarea>
                         </div>
                         <div class="form__component button">
-                            <button type="button" class="btn">
+                            <button type="submit" class="btn">
                                 <div class="button-content-container">
                                     <p class="button-text">Submit</p>
                                     <img class="send-icon" src="./imgs/send-plane-fill.png" alt="" srcset="">
