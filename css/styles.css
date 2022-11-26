@@ -240,137 +240,54 @@ header {
     font-family: Bodoni Moda;
     letter-spacing: -5px;
     font-weight: 500;
-    font-size: 10rem;
+    font-size: 4rem;
     background: linear-gradient(to right, #4abbf0, #11e4dd, #58bb65, #e0ee1c, #ee841c, #ee4c1c);
-    background-size: 1200% 1200%;
+    background-size: 200% 200%;
     opacity: 0;
     transform: translateX(-30%);
 
-    -webkit-animation: color 10s ease infinite;
-    -moz-animation: color 10s ease infinite;
-    animation: slide 1s ease 700ms forwards, color 10s ease infinite;
+    -webkit-animation: slide 1s ease 700ms forwards, color 3s ease infinite;
+    -moz-animation: slide 1s ease 700ms forwards, color 3s ease infinite;
+    animation: slide 1s ease 700ms forwards, color 3s ease infinite;
 
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-@keyframes slide {
-    from {
-        opacity: 0;
-        transform: translateX(-15%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .hero__subtitle {
+    font-family: Bodoni Moda;
+
     opacity: 0;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    background: linear-gradient(to right, rgb(228, 35, 35), rgb(88, 172, 252));
-    animation: appear 500ms ease-in-out 1.25s 1 forwards;
+    background: linear-gradient(
+        to right,
+        rgb(197, 12, 12),
+        rgb(243, 180, 5),
+        rgb(32, 141, 28),
+        rgb(11, 155, 221),
+        rgb(77, 28, 141),
+        rgb(243, 5, 191)
+    );
+    background-size: 700% 700%;
+
+    -webkit-animation: appear 500ms ease-in-out 1.25s 1 forwards, color 10s ease infinite;
+    -moz-animation: appear 500ms ease-in-out 1.25s 1 forwards, color 10s ease infinite;
+    animation: appear 500ms ease-in-out 1.25s 1 forwards, color 10s ease infinite;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-webkit-keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-moz-keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .hero__title,
 .hero__subtitle {
     background-clip: text;
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
     color: transparent;
-}
-
-@-webkit-keyframes color {
-    0% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    50% {
-        background-position: 77% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    100% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-}
-@-moz-keyframes color {
-    0% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    50% {
-        background-position: 77% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    100% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-}
-@keyframes color {
-    0% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    50% {
-        background-position: 77% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    100% {
-        background-position: 24% 0%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
 }
 
 /* ABOUT */
@@ -604,6 +521,16 @@ footer {
     gap: 2em;
 }
 
+@media (min-width: 450px) {
+    .hero__title {
+        font-size: 6.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 2rem;
+    }
+}
+
 @media (min-width: 900px) {
     header {
         position: fixed;
@@ -625,6 +552,14 @@ footer {
         flex-direction: row;
         justify-content: space-evenly;
         background: var(--bg-color-dark);
+    }
+
+    .hero__title {
+        font-size: 10rem;
+    }
+
+    .hero__subtitle {
+        font-size: 3rem;
     }
 
     .project-grid {
@@ -729,4 +664,101 @@ footer {
 .text-show {
     opacity: 1;
     filter: blur(0);
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-15%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes color {
+    0% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background-position: 77% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+@-moz-keyframes color {
+    0% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background-position: 77% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+@keyframes color {
+    0% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background-position: 77% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background-position: 24% 0%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
